@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ProductContext } from '../Utility/Context'
 import { useNavigate, useParams, Link } from 'react-router-dom'
 import Loading from './Loading'
+import {toast} from 'react-toastify'
+
 
 const Details = () => {
     const [products,setProducts] = useContext(ProductContext)
@@ -28,6 +30,7 @@ const Details = () => {
         setProducts(deleteProduct)
         localStorage.setItem('product',JSON.stringify(deleteProduct));
         navigate('/')
+        toast.success('Item Removed Successfully!!!!');
     }
 
   return filterData ? (
