@@ -65,7 +65,7 @@ const Edit = () => {
         className="outline-none w-full border-[1px] border-gray-500 rounded-md px-2 py-1 text-lg font-medium"
         placeholder="Image Link" 
         value={product && product.image}
-        onChange={(e)=>{setimage(e.target.value)}}
+        onChange={onchangeHandler}
         name="image"
         />
 
@@ -76,7 +76,7 @@ const Edit = () => {
             placeholder="Price" 
             className="outline-none w-full border-[1px] border-gray-500 rounded-md px-2 py-1 text-lg font-medium"
             value={product && product.price}
-            onChange={(e)=>{setprice(e.target.value)}}
+            onChange={onchangeHandler}
             name="price"
             />
             <input 
@@ -84,7 +84,7 @@ const Edit = () => {
             className="outline-none w-full border-[1px] border-gray-500 rounded-md px-2 py-1 text-lg font-medium"
             placeholder="category" 
             value={product && product.category}
-            onChange={(e)=>{setcategory(e.target.value)}}
+            onChange={onchangeHandler}
             name="category"
             />
             
@@ -95,7 +95,7 @@ const Edit = () => {
         placeholder="Description here.."
         className="outline-none w-full border-[1px] border-gray-500 rounded-md px-2 py-1 text-lg font-medium"
         value={product && product.description}
-        onChange={(e)=>{setdescription(e.target.value)}}
+        onChange={onchangeHandler}
         name="description"
         ></textarea>
 
