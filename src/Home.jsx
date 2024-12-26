@@ -33,10 +33,10 @@ const Home = () => {
   return filteredProduct ? (
     <div className='w-full h-screen '>
         <Navbar/>
-        <div className='w-full h-full p-10 flex flex-wrap gap-6'>
+        <div className='min-w-1/2 w-full h-full p-10 flex flex-wrap gap-6'>
 
             {filteredProduct && filteredProduct.map((e,i)=>
-            <Link to={`/details/${e.id}`} className='card w-[15%] h-64 border-[1px]  border-zinc-400 rounded-md flex flex-col justify-start gap-3 p-3 items-center'>
+            <Link to={`/details/${e.id}`} className='card w-[15%] h-[33vh] border-[1px]  border-zinc-400 rounded-md flex flex-col justify-start gap-3 p-3 items-center'>
 
                 <div className='w-[76%] h-[76%] rounded-md overflow-hidden hover:overflow-visible '>
                     <img className='w-full h-full object-contain hover:scale-105' src={e.image} alt="" />
